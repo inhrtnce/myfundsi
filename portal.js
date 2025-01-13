@@ -234,7 +234,7 @@ function fianceSignatureWithAffidavit(){
   document.getElementById('affidavitpopupmessage-divpop1').style.display = 'none';
   document.getElementById('agreewithaffidavitpopup-div').style.display = 'none';
   document.getElementById('fiancefullnamedivpop').style.display = 'block';
-  },1000)
+  },500)
   document.body.style.overflow = 'hidden';
 }
 function fianceFullnameinAffidavit(){
