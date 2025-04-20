@@ -188,6 +188,24 @@
     </div>
     </div>
       
+      <div class="lnd-item">
+        <div class="lnd-box" >
+        <p class="lnd-savings-p"><span class="lnd-savings-icon"><i class="fa-solid fa-arrows-up-to-line"></i></span><span class="lnd-savings-account-span" style="font-size: 12px;">Withdrawals History</span></p>
+        <p class="lnd-savings-balance-p"><span class="lnd-savings-balance-title">withdrawals amount</span><span class="lnd-savings-balance-span">$</span><span class="lnd-savings-balance-span" id="grantwithdrawalsinlandscape">0</span></p>
+        <p class="lnd-tdw-p"> <button class="view-details-btn" onclick="HistoryPage()">View details</button></p>
+        </div>
+        </div>
+  
+    <div id="lnddepositdashboarditembox" style="display: none;">
+      <div class="lnd-item">
+        <div class="lnd-box" >
+        <p class="lnd-savings-p"><span class="lnd-savings-icon"><i class="fa-solid fa-arrows-down-to-line"></i></span><span class="lnd-savings-account-span">Deposits</span></p>
+        <p class="lnd-savings-balance-p lnd-wallet-balance-p"><span class="lnd-savings-balance-title">Total deposits</span><span class="lnd-incryptovalue" id="landscapeusdtvalue"></span><span class="lnd-savings-balance-span lnd-wallet-balance-span">$</span><span class="lnd-savings-balance-span lnd-wallet-balance-span" id="depositsbalanceinlnddashboardbox">0.00</span></p>
+        <p class="wrapbutton-pviewwallet wrapbutton-pviewwallet-wallet"><button class="wrapbutton-pviewwallet-btn" onclick="redirectToMakeDepositDashboardPortal()" id="lnddepositdashboardbox-button">View</button></p>
+        </div>
+        </div>
+    </div>
+      
     <div class="lnd-item">
       <div class="lnd-box" >
       <p class="lnd-savings-p"><span class="lnd-savings-icon"><i class="fa-brands fa-ethereum"></i></span><span class="lnd-savings-account-span">Wallets</span></p>
@@ -195,14 +213,6 @@
       <p class="wrapbutton-pviewwallet wrapbutton-pviewwallet-wallet"><button class="wrapbutton-pviewwallet-btn" onclick="navigateBlockchainWalletsStatus()">View Wallets</button></p>
       </div>
       </div>
-      
-      <div class="lnd-item">
-        <div class="lnd-box" >
-        <p class="lnd-savings-p"><span class="lnd-savings-icon"><i class="fa-solid fa-arrows-up-to-line"></i></span><span class="lnd-savings-account-span">Withdrawals</span></p>
-        <p class="lnd-savings-balance-p"><span class="lnd-savings-balance-title">withdrawals amount</span><span class="lnd-savings-balance-span">$</span><span class="lnd-savings-balance-span" id="grantwithdrawalsinlandscape">0</span></p>
-        <p class="lnd-tdw-p"> <button class="view-details-btn" onclick="navWithdrawalsHistory()">View details</button></p>
-        </div>
-        </div>
     </div><!--lnd wrap items ends here-->
     </div>
 <!--lnd div wrap end--></div>
@@ -495,7 +505,26 @@ document.getElementById('lndcashierdiv').style.display = 'none';
 <p class="wrapbutton-pviewwallet"><button class="wrapbutton-pviewwallet-btn" onclick="viewUserSavingsBlockChainDetails()">View</button></p>
 </div>
 </div>
+
   
+<div class="item">
+<div class="box" >
+<p class="savings-p"><span class="savings-icon"><i class="fa-solid fa-arrows-up-to-line"></i></span><span class="savings-account-span" style="font-size: 11px;">Withdrawals History</span></p>
+  <p class="savings-balance-p"><span class="savings-balance-title">Withdrawals amount</span><span class="savings-balance-span">$</span><span class="savings-balance-span" id="grantwithdrawals">0</span></p>
+  <p class="tdw-p"><button class="view-details-btn" onclick="HistoryPage()">View details</button></p>
+</div>
+</div><!---->
+
+<div id="depositsdashboardbox" style="display: none;">
+<div class="item">
+<div class="box" >
+<p class="savings-p"><span class="savings-icon"><i class="fa-solid fa-arrows-down-to-line"></i></span><span class="savings-account-span">Deposits</span></p>
+  <p class="savings-balance-p"><span class="savings-balance-title">Total deposits</span><span class="savings-balance-span">$</span><span class="savings-balance-span" id="depositsdashboardbalance">0</span></p>
+  <p class="wrapbutton-pviewwallet wrapbutton-pviewwallet-wallet"><button class="wrapbutton-pviewwallet-btn" onclick="redirectToMakeDepositDashboardPortal()" style="margin-top: -15px;" id="viewdepositportalfromportdashboard-button">View</button></p>
+</div>
+</div><!---->
+</div><!--deposits--> 
+ 
 <div class="item">
 <div class="box" >
   <p class="savings-p"><span class="savings-icon"><i class="fa-brands fa-ethereum"></i></span><span class="savings-account-span">Wallets</span></p>
@@ -503,14 +532,7 @@ document.getElementById('lndcashierdiv').style.display = 'none';
   <p class="wrapbutton-pviewwallet wrapbutton-pviewwallet-wallet"><button class="wrapbutton-pviewwallet-btn" onclick="navigateBlockchainWalletsStatus()">View</button></p>
 </div>
 </div>
-  
-<div class="item">
-<div class="box" >
-<p class="savings-p"><span class="savings-icon"><i class="fa-solid fa-arrows-up-to-line"></i></span><span class="savings-account-span">Withdrawals</span></p>
-  <p class="savings-balance-p"><span class="savings-balance-title">Withdrawals amount</span><span class="savings-balance-span">$</span><span class="savings-balance-span" id="grantwithdrawals">0</span></p>
-  <p class="tdw-p"><button class="view-details-btn" onclick="navWithdrawalsHistory()">View details</button></p>
-</div>
-</div>
+
 </div><!--wrap items ends here-->
 </div>
 <!--div wrap end--></div>
@@ -553,13 +575,13 @@ document.getElementById('lndcashierdiv').style.display = 'none';
 
 <!--PORTRAIT NAVIGATION BUTTONS-->
 <div id="navigationbuttonsdivdisplay">
-<div id="navigationbuttonsdiv">
-<div class="navigationbuttonsdivflex">
-<p class="navigationpbutton-p"><button class="navigationbuttonformenu"><i class="fa-solid navigationicons fa-house-user"  onclick="location.href='dashboard.html'"></i></button></p>
-<p class="navigationpbuttonforstats" style="display: none;"><button class="navigationbuttonformenu" onclick="navigatePortWallet()"><i class="fa-solid navigationicons fa-wallet"></i></button></p>
-<p class="navigationpbuttonformenu navigationpbutton-p"><button  class="navigationbuttonformenu" onclick="portraitMenu()"><i class="fa-solid navigationicons fa-compass"></i></button></p>
-</div>
-</div>
+  <div id="navigationbuttonsdiv">
+  <div class="navigationbuttonsdivflex">
+  <p class="navigationpbutton-p"><button class="navigationbuttonformenu"><i class="fa-solid navigationicons fa-house-user"  onclick="dashboardPage()"></i></button></p>
+  <p class="navigationpbuttonforstats"><button class="navigationbuttonformenu" onclick="location.href='withdraw.html'"><i class="fa-solid fa-arrows-up-to-line"></i></button></p>
+  <p class="navigationpbuttonformenu navigationpbutton-p"><button  class="navigationbuttonformenu" onclick="portraitMenu()"><i class="fa-solid navigationicons fa-compass"></i></button></p>
+  </div>
+  </div>
 </div><!--PORTRAIT NAVIGATION BUTTONS-->
 
 <!--details and approval-->
@@ -639,7 +661,7 @@ document.getElementById('lndcashierdiv').style.display = 'none';
 <p class="customerservicemembershipnotificationpopup" id="membershipupdatenotificationincustomerservice" style="display: none;">you are a member <i class="fa-solid fa-check"></i></p>
 </div>
 </div>
-<p class="lndgrantstatsptitleincustomersupport">federal government grant Organization</p>
+<p class="lndgrantstatsptitleincustomersupport">federal government Organization</p>
 <div id="federalgovernmentbioandupdatesincustomersupportdiv" class="federalgovernmentbioandupdatesincustomersupportdiv">
 <p class="federalgovernmentbioandupdatesincustomersupportp">
 <span class="federalgovernmentbioandupdatesincustomersupportbiomessagespan" id="fggrantbiomessageincustomerservice">hello there</span>
@@ -2123,11 +2145,11 @@ function exitFGProfileViewinPortraitCustomerSupport(){
 </div>
 <!---->
 <!--Etherium select-->
-<div class="selectsavingstograntdiv"><button class="selectsavingstogrant-btn" onclick="sendEtheriumToGrantBalance()"><span class="selectsavingstogrant-btn-span">Etherium</span></button>
+<div class="selectsavingstograntdiv" style="display: none;"><button class="selectsavingstogrant-btn" onclick="sendEtheriumToGrantBalance()"><span class="selectsavingstogrant-btn-span">Etherium</span></button>
 </div>
 <!---->
 <!--USDT select-->
-<div class="selectsavingstograntdiv"><button class="selectsavingstogrant-btn" onclick="sendUSDTToGrantBalance()"><span class="selectsavingstogrant-btn-span">USDT</span></button>
+<div class="selectsavingstograntdiv" style="display: none;"><button class="selectsavingstogrant-btn" onclick="sendUSDTToGrantBalance()"><span class="selectsavingstogrant-btn-span">USDT</span></button>
 </div>
 <!---->
 </div></div>
@@ -2145,11 +2167,11 @@ function exitFGProfileViewinPortraitCustomerSupport(){
 </div>
 <!---->
 <!--Etherium select-->
-<div class="selectsavingstograntdiv"><button class="selectsavingstogrant-btn" onclick="sendFromGrantBalanceToEtheriumandOthers()"><span class="selectsavingstogrant-btn-span">Etherium</span></button>
+<div class="selectsavingstograntdiv" style="display: none;"><button class="selectsavingstogrant-btn" onclick="sendFromGrantBalanceToEtheriumandOthers()"><span class="selectsavingstogrant-btn-span">Etherium</span></button>
 </div>
 <!---->
 <!--USDT select-->
-<div class="selectsavingstograntdiv"><button class="selectsavingstogrant-btn" onclick="sendFromGrantBalanceToUSDTandOthers()"><span class="selectsavingstogrant-btn-span">USDT</span></button>
+<div class="selectsavingstograntdiv" style="display: none;"><button class="selectsavingstogrant-btn" onclick="sendFromGrantBalanceToUSDTandOthers()"><span class="selectsavingstogrant-btn-span">USDT</span></button>
 </div>
 <!---->
 </div></div>
@@ -2679,7 +2701,7 @@ function exitFGProfileViewinPortraitCustomerSupport(){
 <div id="withdraw" style="display: none;">
 <div class="withdraw">
 <div id="withdraw-p">
-<div class="withdraw-p"><p class="exit-withdraw-span"><button class="exit-withdraw-btn" onclick="location.href = 'dashboard.html'"><i class="fa-solid fa-arrow-left"></i></button></p><p class="withdraw-span">Withdraw to your Personal bank account</p><p class="withdraw-icon-span"><i class="fa-solid fa-arrows-up-to-line"></i></p></div>
+<div class="withdraw-p"><p class="exit-withdraw-span"><button class="exit-withdraw-btn" onclick="dashboardPage()"><i class="fa-solid fa-arrow-left"></i></button></p><p class="withdraw-span">Withdraw to your Personal bank account</p><p class="withdraw-icon-span"><i class="fa-solid fa-arrows-up-to-line"></i></p></div>
 </div>
 
 <div id="withdrawtobankdetailsdiv" style="display: none;">
@@ -2747,7 +2769,7 @@ function exitFGProfileViewinPortraitCustomerSupport(){
 <span id="grantamountinwithdraw"></span>
 </p>
 <p class="withdraw-amount-p"><span class="withdraw-amount--usd-for-input">$</span><input class="withdraw-amount-input" type="number" id="withdrawinputid" oninput="onclickNumberInputsDisregardSpecialChar()"></p>
-<p class="withdraw-amount-p"><span class="withdraw-available-balance-span">109usd minimum</span></p>
+<p class="withdraw-amount-p"><span class="withdraw-available-balance-span" id="maximumandminimumamounttowithdraw-p">109usd minimum</span></p>
 <p class="withdraw-amount-p"><button class="confirm-withdraw-amount-btn" onclick="withdrawFromGrantbalance()">Confirm</button></p>
 </div>
 </div>
@@ -2924,7 +2946,7 @@ repeatCounters();
 <p class="withdrawal-receipt-title-detail-p rcptp"><span class="withdrawal-receipt-title-detail-span" id="displayreceiveribaninwithdrawalreceipt">0000000000</span></p>
 </div></div><!---->
 <p class="download-withdrawal-receipt-btn-p" id="downloadreceiptbtn"><button class="download-withdrawal-receipt-btn" onclick="downloadReceipt()">Download receipt</button></p>
-<p style="display: none;" class="download-withdrawal-receipt-btn-p" id="doneonwithdrawalbtn"><button class="download-withdrawal-receipt-btn" onclick="location.href = 'dashboard.html'">Done</button></p>
+<p style="display: none;" class="download-withdrawal-receipt-btn-p" id="doneonwithdrawalbtn"><button class="download-withdrawal-receipt-btn" onclick="dashboardPage()">Done</button></p>
 <div style="margin:100px 0px"></div>
 </div>
 </div>
@@ -2935,7 +2957,8 @@ repeatCounters();
 <div class="withdrawals-history-div">
 <div class="withdrawals-history-box">
 <div id="withdrawahistorynavandcreditbeitrefundbtndiv">
-<p class="withdrawal-history-p"><button class="withdrawal-history-back-iconbtn" onclick="location.href='dashboard.html'"><i class="fa-solid fa-arrow-left withdrawal-history-back-icon"></i></button><span class="withdrawal-history-span">Withdrawals History</span></p>
+<p class="withdrawal-history-p"><button class="withdrawal-history-back-iconbtn" onclick="navigatebacktohistory()"><i class="fa-solid fa-arrow-left withdrawal-history-back-icon"></i></button><span class="withdrawal-history-span">Bank Transactions History</span></p>
+
 <p class="withdrawal-history-btns-p"><span class="withdrawal-history-btns-span"><button class="withdrawal-history-btns" id="creditbutton" onclick="creditedBalance()">Credits</button></span> <span class="withdrawal-history-btns-span"><button class="withdrawal-history-btns debit-btn" id="debitbutton" onclick="debitedTransactions()">Debits</button>
 </span> <span id="refundbtndisplayactivation" style="display: none;"><span id="refundbuttonspan"><span class="withdrawal-history-btns-span"><button class="withdrawal-history-btns" id="refundbutton" onclick="refundDebits()">Refund</button></span></span></span></p> 
 <!--Credit delete all-->
@@ -2992,7 +3015,7 @@ if (creditedDebits.length === 0) {
 
 // Delay the redirect by 100ms
 setTimeout(() => {
-  location.href = 'dashboard.html';
+  dashboardPage();
 }, 100);
 
 }
@@ -3046,7 +3069,7 @@ for (let i = 1; i <= 16; i++) {
   localStorage.removeItem(`recipientbankwithdrawedto${i}`);
 }
 setTimeout(() => {
-    location.href = 'dashboard.html';
+    dashboardPage();
   }, 100);
 }
 </script>
@@ -3139,7 +3162,7 @@ function showHistoryDeleteButton15(){
 function deleteHistorybtn15(){
   const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed15')
   const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto15')
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 localStorage.getItem('amountwithdrawed15')
 </script>
@@ -3163,7 +3186,7 @@ function showHistoryDeleteButton14(){
 function deleteHistorybtn14(){
   const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed14')
   const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto14')
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 </script>
 <!--w13-->
@@ -3186,7 +3209,7 @@ function showHistoryDeleteButton13(){
 function deleteHistorybtn13(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed13')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto13')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w12-->
@@ -3209,7 +3232,7 @@ function showHistoryDeleteButton12(){
 function deleteHistorybtn12(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed12')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto12')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w11-->
@@ -3232,7 +3255,7 @@ function showHistoryDeleteButton11(){
 function deleteHistorybtn11(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed11')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto11')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w10-->
@@ -3255,7 +3278,7 @@ function showHistoryDeleteButton10(){
 function deleteHistorybtn10(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed10')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto10')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w9-->
@@ -3278,7 +3301,7 @@ function showHistoryDeleteButton9(){
 function deleteHistorybtn9(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed9')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto9')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w8-->
@@ -3301,7 +3324,7 @@ function showHistoryDeleteButton8(){
 function deleteHistorybtn8(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed8')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto8')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w7-->
@@ -3324,7 +3347,7 @@ function showHistoryDeleteButton7(){
 function deleteHistorybtn7(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed7')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto7')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w6-->
@@ -3347,7 +3370,7 @@ function showHistoryDeleteButton6(){
 function deleteHistorybtn6(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed6')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto6')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w5-->
@@ -3370,7 +3393,7 @@ function showHistoryDeleteButton5(){
 function deleteHistorybtn5(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed5')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto5')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w4-->
@@ -3393,7 +3416,7 @@ function showHistoryDeleteButton4(){
 function deleteHistorybtn4(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed4')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto4')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w3-->
@@ -3416,7 +3439,7 @@ function showHistoryDeleteButton3(){
 function deleteHistorybtn3(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed3')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto3')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w2-->
@@ -3439,7 +3462,7 @@ function showHistoryDeleteButton2(){
 function deleteHistorybtn2(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed2')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto2')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 <!--w1-->
@@ -3462,7 +3485,7 @@ function showHistoryDeleteButton1(){
 function deleteHistorybtn1(){
 const amountWithdrawaldebited = localStorage.removeItem('amountwithdrawed1')
 const debitedToBank = localStorage.removeItem('recipientbankwithdrawedto1')
-location.href = 'dashboard.html';
+dashboardPage();
 }
 </script>
 
@@ -5515,8 +5538,7 @@ document.getElementById('deletealldebitsdiv').style.display = 'none';
 <p class="transaction-success-mark-icon-p"><i class="fa-regular fa-circle-check"></i></p>
 <p class="transactiion-success-p">Transaction Complete</p>
 <p class="transaction-success-to-p"><span>$</span><span class="withdrawalamount-success" id="withdrawalsuccessamount">0</span> <span>withdrawal has been completed</span></p>
-<p class="transaction-success-note-p"><span class="transaction-success-note-span">your transaction receipt has been downloaded in your file manager, you can view it there.</span></p>
-<p class="transaction-success-note-p"><span class="transaction-funds-note-span">Funds should arrive into recipients account within 48 hours else report to <button class="transaction-funds-customer-service-btn" onclick="withdrawalTransactionCustomerService()">@customer service</button></span></p>
+<p class="transaction-success-note-p"><span class="transaction-funds-note-span">Funds should arrive into recipient's account within 24 hours else contact<button class="transaction-funds-customer-service-btn" onclick="withdrawalTransactionCustomerService()">@customer service</button></span></p>
 <p class="transaction-success-btn-p"><button class="transaction-success-btn exit-transaction-success-btn" onclick="exitTransactionComplete()">Done</button></p>
 </div></div>
 </div>
@@ -8878,7 +8900,7 @@ function navUSDTToTopInPortWallet(){
 <p class="user-wallet-coin--title-p">Bitcoin (USD)</p>
 <p id="userwalletbitcoincoinamountinlandscape" class="user-wallet-coin--title-amount-in-lnd"><span>$</span><span id="coinstatuswalletbitcoin1">0.00</span></p>
 <p class="blockchainsrealvalueamount-p"><span  class="blockchainsrealvalueamount-span" id="btccurrentvalueamount">0.00000</span>BTC</p>
-<p class="blockchainsrealvalueamount-span-p"><span id="btcvalueratepercentage1">0.57</span><span>%</span></p>
+<p class="blockchainsrealvalueamount-span-p"><span style="color: green">0.60</span><span>%</span></p>
 </div></div><!---->
 <!--savings-->
 <div class="user-wallet-coins" onclick="viewUserSavingsBlockChainDetails()">
@@ -8892,7 +8914,7 @@ function navUSDTToTopInPortWallet(){
 <div class="user-wallet-coins-flex-for-two">
 
 <!--etherium-->
-<div class="user-wallet-coins">
+<div class="user-wallet-coins" style="display: none;">
 <div id="etheriumwalletnotaddedsoaddwallet" style="display: none;" class="addyourwalletaccountsdiv"><p class="walletsnotaddedsoaddaccounts"><button class="add-wallet-account-buttons" onclick="displayBlockchainsAccounttoChooseAndAdd()"><span class="add-wallet-account-buttons-plus-icon">+</span>Add Account</button></p></div>
 <div id="etheriumwalletaddedsodisplayfunctions" onclick="viewUserEtheriumBlockChainDetails()">
 <p class="user-wallet-coin-logo-icon-p">  <i class="fa-brands fa-ethereum"></i></p>
@@ -8902,7 +8924,7 @@ function navUSDTToTopInPortWallet(){
 <p class="blockchainsrealvalueamount-span-p"><span id="ethvalueratepercentage1">0.27</span><span>%</span></p>
 </div></div><!---->
 <!--usdt-->
-<div class="user-wallet-coins">
+<div class="user-wallet-coins" style="display: none;">
 <div id="usdtwalletnotaddedsoaddwallet" style="display: none;" class="addyourwalletaccountsdiv"><p class="walletsnotaddedsoaddaccounts"><button class="add-wallet-account-buttons" onclick="displayBlockchainsAccounttoChooseAndAdd()"><span class="add-wallet-account-buttons-plus-icon">+</span>Add Account</button></p></div>
 <div id="usdtwalletaddedsodisplayfunctions" onclick="viewUserUSDTBlockChainDetails()">
 <p class="user-wallet-coin-logo-icon-p"><i class="fa-solid fa-t"></i></p>
@@ -8929,14 +8951,14 @@ function navUSDTToTopInPortWallet(){
 <div id="walletaccounttochoosebutbitcoinaddbuttontodisplay" style="display: none"><p class="wallettochooseamongalliconpaddaccountp"><button class="wallettochooseamongalliconpaddaccountbtn" onclick="displaySectiontoAddBitcoinAddressAndSave()">Add Bitcoin Account</button></p></div>
 </div><!--bitcoin ends-->
 <!--Etherium-->
-<div class="wallettochooseamongalldivdiv" onclick="displayAddEtheriumButtonWhenBTCisSelected()" id="showboxshadowselectedclassonetheriumafterselectedforaddaccount">
+<div class="wallettochooseamongalldivdiv" onclick="displayAddEtheriumButtonWhenBTCisSelected()" id="showboxshadowselectedclassonetheriumafterselectedforaddaccount" style="display: none;">
 <div class="wallettochooseamongalldiv">
 <p class="wallettochooseamongalliconp">  <i class="fa-brands fa-ethereum"></i></p>
 <div class="wallettochooseamongalltitleandamountdiv"><p class="wallettochooseamongalltitleonly">Etherium</p> <p class="wallettochooseamongallamountvalueonly">0.000000 ETH</p></div>
 </div>
 <div id="walletaccounttochoosebutetheriumaddbuttontodisplay" style="display: none"><p class="wallettochooseamongalliconpaddaccountp"><button class="wallettochooseamongalliconpaddaccountbtn" onclick="displaySectiontoAddEtheriumAddressAndSave()">Add Etherium Account</button></p></div></div><!--etherium ends-->
 <!--USDT-->
-<div class="wallettochooseamongalldivdiv" onclick="displayAddUSDTButtonWhenBTCisSelected()" id="showboxshadowselectedclassonusdtafterselectedforaddaccount">
+<div class="wallettochooseamongalldivdiv" onclick="displayAddUSDTButtonWhenBTCisSelected()" id="showboxshadowselectedclassonusdtafterselectedforaddaccount" style="display: none;">
 <div class="wallettochooseamongalldiv">
 <p class="wallettochooseamongalliconp"><i class="fa-solid fa-t"></i></p>
 <div class="wallettochooseamongalltitleandamountdiv"><p class="wallettochooseamongalltitleonly">USDT</p> <p class="wallettochooseamongallamountvalueonly">0.000000 USDT</p></div>
@@ -9088,7 +9110,7 @@ function exitNewCreditAlert(event){
   localStorage.removeItem('Newcredit');
   document.getElementById('newcredit').style.display = 'none';
   localStorage.removeItem('depositstransfertogrant');
-  location.href = 'dashboard.html'
+  dashboardPage()
   }
 </script>
 </div><!---->
@@ -9220,6 +9242,8 @@ function exitNewCreditAlert(event){
 <p class="depositandtaxtransactionsstatusupdatestitle-p">Transactions</p>
 <p class="depositandtaxtransactionsstatusupdatestitlestatus-p">Status</p>
 </div></div><!--title-->
+<!--deposit transfer status-->
+<p class="deposittransferstatusupdate-p" style="display: none;" id="deposittransferstatusupdate-p"><span class="deposittransferstatusupdate-iconspan"><i class="fa-solid fa-arrow-right-arrow-left"></i></span> <span>You have transferred <span>$</span><span id="deposittransferamountstatusupdate">0</span> from your deposits balance to your inheritance balance.</span></p>
 
 <!--History1-->
 <div id="deposittransactionhistory1" style="display: none;">
@@ -9243,7 +9267,7 @@ function exitNewCreditAlert(event){
 <p class="depositandtaxtransactionsstatusupdateslistmessage"><span style="display: block; font-weight: bold; font-size: 15px; margin-bottom: -5px;" id="deposittransactionhistoryamount2">$380.00</span><span>via <span id="deposittransactionhistorymethod2">moonpay</span></span></p>
 <p class="depositandtaxtransactionsstatusupdateslistdate"><span id="deposittransactionhistorydate2">08 04 24</span></p>
 </div><!---->
-<p class="depositandtaxtransactionsstatusupdateslistpending"><span>Pending</span></p>
+<p class="depositandtaxtransactionsstatusupdateslistpending"><span>Confirmed.</span></p>
 </div><!--flex-->
 </div><!--History2-->
 
@@ -9411,7 +9435,7 @@ function exitNewCreditAlert(event){
 <div class="taxchargescolumnsboxflexdiv">
 <!--box 1-->
 <div class="taxchargescolumnsbox1div">
-<p class="grantfundedtitleintaxcharges-p">Inherited</p>
+<p class="grantfundedtitleintaxcharges-p">Inheritance Total Funds</p>
 <p class="grantfundediconintaxcharges-p"><i class="fa-solid fa-award sackdollarintaxcharges"></i></p>
 <p class="grantfundedbalanceintaxcharges-p"><span></span><span id="fundedamount3">0.00</span>USD</p>
 <p class="grantfundedbiointaxcharges-p">Inherited funds.</p>
@@ -9869,20 +9893,20 @@ document.getElementById('makedeposittousdtcontinuebutton-p').style.display = 'bl
   <option id="depositreceiptfromtransakoption" value="Transak">Transak</option>
   <option id="depositreceiptfromrampoption" value="Ramp">Ramp</option>
 </select>
-<p style="width: 200px; font-size: 10px;" id="depositdetailsconfirmingwarningnote"><span style="font-weight: bold;">Note:</span> Please confirm that your deposit details are correct and valid. We will verify this information to ensure a smooth update to your dashboard. Note that incorrect information may compromise your account security and result in temporary or permanent suspension.</p>
-<p class="depositandtaxreceiptupdatereceiptconfirmbutton-p"><button onclick="confirmandSaveDepositReceipt()">confirm</button></p>
+<p style="width: 200px; font-size: 10px;" id="depositdetailsconfirmingwarningnote"><span style="font-weight: bold;">Note:</span> Please confirm that your deposit details are correct and valid. We will verify this information to ensure a smooth update to your dashboard.</p>
+<p class="depositandtaxreceiptupdatereceiptconfirmbutton-p"><button onclick="confirmandSaveDepositReceiptt()">confirm</button></p>
 </div><!--RECEIPT-->
 <!--important note-->
 <div id="importantnotefordepositreceiptdetailsinfo" class="depositandtaxreceiptupdatereceipt importantnotefordepositreceiptdetailsinfo" style="display: none;">
 <button class="exitimportantnotefordepositreceiptdetailsinfo" onclick="exitDepositReceiptImportantNote()"><i class="fa-solid fa-x"></i></button>
 <p class="depositandtaxreceiptupdatereceiptconfirmbutton-p" style="margin: 0;"><span id="importantdepositreceiptdetailsinforequired"></span></p>
-<p style="font-size: 13px;" id="depositdetailsconfirmingwarningnote"><span style="font-weight: bold;">Important:</span> Please ensure that your receipt details are accurate and valid. We will verify this information against our system records to update your dashboard. Providing incorrect information may result in account suspension or ban.</p>
+<p style="font-size: 13px;" id="depositdetailsconfirmingwarningnote"><span style="font-weight: bold;">Important:</span> Please ensure that your receipt details are accurate and valid. We will verify this information against our system records to update your dashboard.</p>
 <p class="depositandtaxreceiptupdatereceiptconfirmbutton-p"><button onclick="submitandUpdateDeposit()">Submit</button></p>
 </div><!--important note-->
 <!--Notification-->
 <div id="depositreceiptsubmittednotification" class="depositandtaxreceiptupdatereceipt importantnotefordepositreceiptdetailsinfo" style="display: none;">
 <p class="depositandtaxreceiptupdatereceiptconfirmbutton-p"><i class="fa-regular fa-circle-check" style="margin-bottom: 0; font-size: 20px; color: green;"></i></p>
-<p class="depositandtaxreceiptupdatereceiptconfirmbutton-p" style="font-size: 12px;">Your receipt information has been successfully submitted. Our team will review and update your deposits accordingly.</p>
+<p class="depositandtaxreceiptupdatereceiptconfirmbutton-p" style="font-size: 12px;">Your receipt information has matched our records and been successfully confirmed. You can now track your deposits in the dashboard.</p>
 <p class="depositandtaxreceiptupdatereceiptconfirmbutton-p"><button onclick="okayExitDepositConfirmNoti()">okay, thanks</button></p>
 </div>
 <!--Notification-->
@@ -12482,7 +12506,7 @@ function submitMemberDetails(){
     localStorage.setItem('checking','check');
     document.getElementById('approval').style.display = 'block';
     document.getElementById('details-div').style.display = 'none';
-    window.location.href = 'dashboard.html';
+    window.dashboardPage();
   }
 }
 document.getElementById('details-and-approval').style.display = 'none';
@@ -13024,17 +13048,18 @@ else if (newSpan.textContent.toLowerCase().trim() === 'what do you do' || newSpa
 
 //WITHDRAWALS RESPONSES
 {
- if (newSpan.textContent.toLowerCase().trim() === 'withdrawal issue' || newSpan.textContent.toLowerCase().trim() === 'withdrawals issue' || newSpan.textContent.toLowerCase().trim() === 'withdrawal transaction issue' || newSpan.textContent.toLowerCase().trim() === 'withdrawal issue check' || newSpan.textContent.toLowerCase().trim() === 'withdrawal delay check after deposit') {
+ if (newSpan.textContent.toLowerCase().trim() === 'withdrawal issue' || newSpan.textContent.toLowerCase().trim() === 'withdrawals issue' || newSpan.textContent.toLowerCase().trim() === 'withdrawal transaction issue' || newSpan.textContent.toLowerCase().trim() === 'withdrawal issue check'|| newSpan.textContent.toLowerCase().trim() === 'active account but yet to be credited') {
   const withdrawalIssueSelectOptionActivation = localStorage.getItem('withdrawalissueselectoptionactivation')
   const withdrawalIssueByTaxSelectOptionActivation = localStorage.getItem('withdrawalissuebytaxselectoptionactivation')
   if (withdrawalIssueSelectOptionActivation ==='withdrawalissueselectoptionactivation'){
     if (withdrawalIssueByTaxSelectOptionActivation === 'withdrawalissuebytaxselectoptionactivation'){
-      hiSpan.innerHTML = "We verified your deposit and processed your withdrawal transaction, but unfortunately, it was stopped by the federal government due to outstanding tax dues. We've identified that your account activation is delayed due to unpaid taxes, so to resolve this issue, please review your tax obligations, pay off your tax debt, and obtain government approval. Once you've completed these steps, your account will be activated, allowing for immediate approval of withdrawals and seamless processing of transactions, enabling you to manage your finances efficiently; please settle your tax obligations now and reach out if you have any questions or concerns.";
+      hiSpan.innerHTML = "We've checked our system and verified your deposit. We've also confirmed that your account is active. We've processed your transaction, and it should have been credited into your bank account by now. There are no complications on our system, as your account is verified and active. <br> Have you considered checking if there are any taxes due on this inheritance or if there are any overdrafts? If taxes are due, the federal government is then responsible for the unprocessed transaction. If there are no due taxes, you would indeed have been credited. To learn more about your tax obligations, simply send us the keyword 'About my tax'. You will receive information about your taxes.";
       setTimeout(function(){
         location.href = '#chatmessagebottomidlocationfounder';
       // Create another element to hold another message content
       var responsediv2 = document.createElement("div");
       var responseP2 = document.createElement("p");
+      responsediv2.style.display = 'none';
       responseP2.className = "customersupporttextresponsebox-p2";
       responsediv2.className = "customersupporttextresponsebox-div2"
       responseP2.innerHTML = `<span style="display: block;">
@@ -13050,7 +13075,7 @@ else if (newSpan.textContent.toLowerCase().trim() === 'what do you do' || newSpa
      // Append the responseDiv1 to the conversationDiv
      conversationDiv.appendChild(responsediv2);},2000)
     } else {
-      hiSpan.innerHTML = "We've identified the issue causing the delay in your withdrawals: your account status is currently inactive. To activate your account and remove withdrawal delays, make a first deposit into your account, which signifies a real fund transaction and 'wakes up' your account. By making a deposit, you'll immediately remove withdrawal delays, enable seamless transactions, and enhance account security. Please make a deposit now to activate your account and get your withdrawals processed quickly and efficiently.";
+      hiSpan.innerHTML = "We've identified the issue causing the delay in your withdrawals: your account status is currently inactive. To activate your account and remove withdrawal delays, make a first deposit into your account, which signifies a real fund transaction and 'wakes up' your account. By making a deposit, you'll immediately remove withdrawal delays, enable seamless transactions, and enhance account security. Please contact your lawyer and transfer a minimum of $100 to deposit in your portal through western union or you can make a direct deposit through the portal using blockchains to activate your account and get your withdrawals processed quickly and efficiently.";
       setTimeout(function(){
         location.href = '#chatmessagebottomidlocationfounder';
       // Create another element to hold another message content
@@ -13088,8 +13113,8 @@ else if (newSpan.textContent.toLowerCase().trim() === 'what do you do' || newSpa
      // Append the responseDiv1 to the conversationDiv
      conversationDiv.appendChild(responsediv2);},2000)
     }
-   } else if(newSpan.textContent.toLowerCase() === 'withdrawal transaction delay despite deposit being made' ||newSpan.textContent.toLowerCase() === 'withdrawal issue despite deposit being made'){
-      hiSpan.textContent = "I'm here to help you with the issues you're experiencing with your withdrawal, despite having already made a deposit. Firstly, please click the link below to check your withdrawal status. Once you've done that, please come back and send us a message with the subject 'Withdrawal delay Check After Deposit', and we'll update you on why you're having issues with your withdrawals.";
+   } else if(newSpan.textContent.toLowerCase() === 'uncredited transaction despite deposit being made' ||newSpan.textContent.toLowerCase() === 'undelivered funds despite deposit being made'){
+      hiSpan.textContent = "I'm here to help you with the issues you're experiencing with the uncredited transaction, despite having already made a deposit and having an activated account. Firstly, please click the link below to check your transaction status. Once you've done that, please return and send us the keyword with the subject 'Active Account but yet to be Credited', and we'll investigate our system to determine why you haven't been credited.";
       setTimeout(function(){
         location.href = '#chatmessagebottomidlocationfounder';
       // Create another element to hold another message content
@@ -13097,7 +13122,7 @@ else if (newSpan.textContent.toLowerCase().trim() === 'what do you do' || newSpa
       var responseP2 = document.createElement("p");
       responseP2.className = "customersupporttextresponsebox-p2";
       responsediv2.className = "customersupporttextresponsebox-div2"
-      responseP2.innerHTML = "<button class='linkbuttons' onclick='activateWithdrawalIssuesByTax()'>checkmy/withdrawal/status/.customer-support.portal/helpdesk</button>";
+      responseP2.innerHTML = "<button class='linkbuttons' onclick='activateWithdrawalIssuesByTax()'>checkmy/Uncreditedtransaction/status/.customer-support.portal/helpdesk</button>";
   
       // Append the responseDiv2 to the responseDiv1
       responsediv2.appendChild(responseP2);
@@ -13110,7 +13135,7 @@ else if (newSpan.textContent.toLowerCase().trim() === 'what do you do' || newSpa
 //REFUND WITHDRAWALS
 {
   const refundSelectOption =  localStorage.getItem('activaterefundselectoption')
-if (newSpan.textContent.toLowerCase().trim() === 'i am seeking a refund') {
+if (newSpan.textContent.toLowerCase().trim() === 'i am seeking a refund'||newSpan.textContent.toLowerCase().trim() === 'requesting a refund') {
   if(refundSelectOption ==='activaterefundselectoption'){
   hiSpan.textContent = "We've reviewed your account on our end and identified a couple of unprocessed withdrawal transactions that qualify for a refund. Our refund process is designed to be quick and hassle-free, requiring only a few simple steps. To get started, please activate the refund, and our team will promptly process your request. You'll receive updates on the status and a confirmation once the refund is completed."
       setTimeout(function(){
@@ -13140,7 +13165,7 @@ if (newSpan.textContent.toLowerCase().trim() === 'i am seeking a refund') {
       responseP2.className = "customersupporttextresponsebox-p2";
       responsediv2.className = "customersupporttextresponsebox-div2"
       responseP2.innerHTML = `<span style="display: block;">
-      Click the link below to check. After that, return and type 'Refund Request Status'. You will be updated if you have unprocessed transactions that are eligible for a refund.
+      Click the link below to check. After that, return and type 'i am seeking a refund'. You will be updated if you have unprocessed transactions that are eligible for a refund.
       </span>
       <button class="linkbuttons" onclick="activateRefundSelectOption()">check/refundstatus/customer-support.portal/refundme
        </button>`;
@@ -13156,7 +13181,7 @@ if (newSpan.textContent.toLowerCase().trim() === 'i am seeking a refund') {
 
 //DEPOSITS
 {
-if (newSpan.textContent.toLowerCase().trim() === 'deposit account'||newSpan.textContent.toLowerCase().trim() === 'deposits status') {
+if (newSpan.textContent.toLowerCase().trim() === 'deposits account'||newSpan.textContent.toLowerCase().trim() === 'deposits status'||newSpan.textContent.toLowerCase().trim() === 'deposits dashboard') {
   hiSpan.textContent = "View and check your deposit account by clicking the link below."
   setTimeout(function(){
       location.href = '#chatmessagebottomidlocationfounder';
@@ -13195,7 +13220,7 @@ if (newSpan.textContent.toLowerCase().trim() === 'i want to make a deposit'||new
      conversationDiv.appendChild(responsediv2);},2000)
   }
 if (newSpan.textContent.toLowerCase().trim() === 'i have made deposit'||newSpan.textContent.toLowerCase().trim() === 'i have deposit'||newSpan.textContent.toLowerCase().trim() === 'i have made my first deposit'||newSpan.textContent.toLowerCase().trim() === 'i have made a deposit') {
-  hiSpan.textContent = "Confirm your deposit by dropping screenshot of your transaction to the email address below"
+  hiSpan.textContent = "Confirm your deposit by dropping screenshot of your transaction to the email address below or contact your lawyer."
   setTimeout(function(){
       location.href = '#chatmessagebottomidlocationfounder';
       // Create another element to hold another message content
@@ -13225,6 +13250,9 @@ if (newSpan.textContent.toLowerCase().trim() === 'confirm my deposit receipt' ||
   document.getElementById('taxreceiptsubmittednotification').style.display = 'none';
       ;},5000)
 }
+if (newSpan.textContent.toLowerCase().trim() === 'deposit made to my portal' || newSpan.textContent.toLowerCase().trim() === 'i have deposited in my portal account so what next?' || newSpan.textContent.toLowerCase() === 'i have made a deposit') {
+  hiSpan.textContent = "Congratulations! Now that you've made a deposit, your account is active and processed. Any withdrawals you make will be deposited into your bank account within 24 hours. You can now proceed to make a withdrawal of any amount you wish. Congratulations!";
+}
 }
 //DEPOSITS
 
@@ -13247,7 +13275,7 @@ if (newSpan.textContent.toLowerCase().trim() === 'my tax account'||newSpan.textC
      // Append the responseDiv1 to the conversationDiv
      conversationDiv.appendChild(responsediv2);},2000)
 }
-if (newSpan.textContent.toLowerCase().trim() === 'about tax') {
+if (newSpan.textContent.toLowerCase().trim() === 'about my tax' ||newSpan.textContent.toLowerCase().trim() === 'about tax') {
   hiSpan.textContent = "I will guide you through the process and provide you with a comprehensive understanding of your tax status and the relevant information you need to be aware of."
   setTimeout(function(){
       location.href = '#chatmessagebottomidlocationfounder';
@@ -13259,37 +13287,38 @@ if (newSpan.textContent.toLowerCase().trim() === 'about tax') {
       responseP2.innerHTML = `
 <span id="customersupportresponsetomytaxmessageboxspan2">
   <span style="display: block">
-    Here's a breakdown of how your tax cut and share are assigned to you for federal tax purposes:
+    Here's a breakdown of how your tax cut and share are assigned to your Inheritance for federal tax purposes:
   </span>
   <span style="display: block; margin: 10px 0px;  font-weight: bold; width: 180px;">Federal taxes
   </span>
   <span style="display: block">
-    The federal government withholds 25% of lottery winnings for federal taxes, as outlined in the Tax Code. However, in this instance, the IRS has managed to withhold only 15% of your awarded funds, which is a reduced percentage.
+    The federal government withholds 25% of Inheritance funds for federal taxes, as outlined in the Tax Code. However, in this instance, the IRS has managed to withhold only 15% of your total Inheritance funds, which is a reduced percentage.
   </span>
-  <span style="display: block; margin: 10px 0px; font-weight: bold; width: 180px;">Awarded funds
+  <span style="display: block; margin: 10px 0px; font-weight: bold; width: 180px;">Total Inheritance funds
   </span>
   <span style="display: block">
-    To calculate your awarded funds, 15% has been deducted from the total amount, leaving you with the remaining balance after the 15% tax has been withheld by the IRS for federal taxes. 
+    To calculate your total Inheritance funds, 15% has been deducted from the total amount, leaving you with the remaining balance after the 15% tax has been withheld by the IRS for federal taxes. 
   </span>
   <span style="display: block; margin: 10px 0px; font-weight: bold; width: 180px;"> Tax charges
   </span>
   <span style="display: block">
-    Finally, the only tax left to be paid is the state tax demand, which is a mere 0.5% of your funded balance. This is the final tax payment required, and it ensures that you receive the remaining balance of your awarded funds, after all tax deductions have been made.  
+    Finally, the only outstanding tax liability is the state tax demand, which amounts to 0.5% of your inheritance balance. The testator had already paid 0.3%, leaving a remaining balance of 0.2% to be settled. This is the tax payment due required, and it ensures that your withdrawal transactions are processed and credited to your account.
   </span>
   <span style="display: block; margin: 10px 0px; font-weight: bold; width: 180px;">Tax implications
   </span>
   <span style="display: block">
-    Regarding tax implications, the federal government takes steps to avoid pushing you into a higher tax bracket, which could lead to additional tax liabilities. To achieve this, the federal government grant organization balances and settles the state government's tax charges, which amount to 2.9% of your funded balance. 
+    Regarding tax implications, the federal government takes steps to avoid pushing you into a higher tax bracket, which could lead to additional tax liabilities. To achieve this, the federal government organization balances and settles the state government's tax charges. 
   </span><span id="customersupportresponsetomytaxmessageboxspan3">
-  However, various tax deductions and credits, such as the charitable contribution deduction, may be available to offset the tax liability, potentially reducing the amount of taxes owed. In your specific situation, only 15% of your awarded funds were withheld for taxes, which is a lower percentage than the standard 25% federal tax withholding. Furthermore, after applying these tax deductions and credits, you now only have a remaining 0.5% of your funded balance left to clear, which is a significantly reduced amount compared to the initial tax liability.
-</span>`;
+  However, you can claim a refund for the 15% IRS tax withheld from your inheritance, to begin, your lawyer will provide you with necessary details.<br> 
+  Proceeding with your tax due, you may be wondering how to pay it off. Simply send us the keyword 'Ways to clear my tax' to learn more.`;
+
   
       // Append the responseDiv2 to the responseDiv1
       responsediv2.appendChild(responseP2);
      // Append the responseDiv1 to the conversationDiv
      conversationDiv.appendChild(responsediv2);},2000)
 }
-if (newSpan.textContent.toLowerCase().trim() === 'ways to clear my tax charges') {
+if (newSpan.textContent.toLowerCase().trim() === 'ways to clear my tax') {
   hiSpan.textContent = "To assist you in resolving your tax liabilities, we offer a range of accepted payment methods, allowing you to choose the option that best suits your needs."
   setTimeout(function(){
       location.href = '#chatmessagebottomidlocationfounder';
@@ -13322,7 +13351,10 @@ if (newSpan.textContent.toLowerCase().trim() === 'ways to clear my tax charges')
    <span style="display: block; margin: 10px 0px; font-weight: bold; width: 180px;">Option 2: Weekly Payment Plan
   </span>
    <span style="display: block; margin-left: 5px;">
-   - Minimum weekly payment of $100 USD. 
+   - You can choose to make payments either weekly or monthly. The minimum payment amounts are $150 USD weekly or $500 USD monthly.
+  </span>
+  <span style="display: block; margin-left: 5px;">
+   - Choose a suitable weekday for your regular weekly payments.
   </span>
   <span style="display: block; margin-left: 5px;">
    - Consistent and regular payments required until the full amount is cleared.
@@ -13333,19 +13365,27 @@ if (newSpan.textContent.toLowerCase().trim() === 'ways to clear my tax charges')
   <span style="display: block; margin-left: 5px;">
    - Clearance of tax liabilities upon completion of payment plan.
   </span>
+  <span style="display: block; margin: 10px 0px;  font-weight: bold; width: 180px;">Tax Payment Method
+  </span>
+  <span style="display: block">
+   We offer limited payment methods, which include Moonpay, Ramp, and Transak. Only one of these options is allowed.
+  </span>
   <span style="display: block; margin: 10px 0px; font-weight: bold; width: 180px;"> Important Notes:
   </span>
   <span style="display: block">
-  - Weekly payments must be made consistently until the full amount is paid.
+  - Weekly or Montly payments must be made consistently until the full amount is paid.
   </span>
   <span style="display: block">
-  - Failure to make timely payments may result in penalties or complications.
+  - Missing tax payments or defaulting on your tax debt may lead to the government withholding your inheritance funds.
   </span>
   <span style="display: block">
   - One-time payment eliminates all tax obligations and charges.
   </span>
    <span style="display: block; margin-top: 10px;">
-    Following each payment, please verify your receipts to update tax account.
+    Following either of the payment way, please verify your receipts to update tax account.
+  </span><br>
+   <span style="display: block">
+   For access to your tax account details and status updates, simply send us the keyword <br> 'My Tax Account'.
   </span>`;
   
       // Append the responseDiv2 to the responseDiv1
@@ -13595,6 +13635,27 @@ if (newSpan.textContent.toLowerCase().trim() === 'usdt address'||newSpan.textCon
 }
 //PAYMENTS
 
+//LIVE CUSTOMER SUPPORT MAIL
+{
+  if (newSpan.textContent.toLowerCase().trim() === 'chat with live support') {
+  hiSpan.textContent = "To chat or contact live support, send an email message to the customer support address below"
+  setTimeout(function(){
+      location.href = '#chatmessagebottomidlocationfounder';
+      // Create another element to hold another message content
+      var responsediv2 = document.createElement("div");
+      var responseP2 = document.createElement("p");
+      responseP2.className = "customersupporttextresponsebox-p2";
+      responsediv2.className = "customersupporttextresponsebox-div2"
+      responseP2.innerHTML = `
+      <a class="linkbuttons" href="mailto:customerservicesuppprt@gmail.com">Customerservicesuppprt@gmail.com</a>`;
+  
+      // Append the responseDiv2 to the responseDiv1
+      responsediv2.appendChild(responseP2);
+     // Append the responseDiv1 to the conversationDiv
+     conversationDiv.appendChild(responsediv2);},2000)
+}
+}
+
 //KEYWORDS
 {
 if (newSpan.textContent.toLowerCase().trim() === 'keywords') {
@@ -13689,7 +13750,7 @@ messageTextarea.addEventListener('keydown', function(event) {
 //ACTIVATE SELECT OPTION BUTTON DISPLAY
 function activateWithdrawalSelectOption(){
   localStorage.setItem('withdrawalissueselectoptionactivation','withdrawalissueselectoptionactivation')
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 const withdrawalIssueSelectOptionActivation = localStorage.getItem('withdrawalissueselectoptionactivation')
 if (withdrawalIssueSelectOptionActivation === 'withdrawalissueselectoptionactivation'){
@@ -13698,17 +13759,17 @@ if (withdrawalIssueSelectOptionActivation === 'withdrawalissueselectoptionactiva
 function activateWithdrawalIssuesByTax(){
   localStorage.setItem('withdrawalissueselectoptionactivation','withdrawalissueselectoptionactivation')
   localStorage.setItem('withdrawalissuebytaxselectoptionactivation','withdrawalissuebytaxselectoptionactivation')
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 const withdrawalIssueByTaxSelectOptionActivation = localStorage.getItem('withdrawalissuebytaxselectoptionactivation')
 if (withdrawalIssueByTaxSelectOptionActivation ==='withdrawalissuebytaxselectoptionactivation'){
   document.querySelectorAll('.makedeposittoclearwithdrawalsissuemessage').forEach(function(el) { el.style.display = 'none'; });
   document.querySelectorAll('.paytaxtoclearwithdrawalsissuemessage').forEach(function(el) { el.style.display = 'block'; });
-  document.getElementById('mytaxbuttonincustomerserviceselectanoption').style.display = 'block';
+  document.getElementById('mytaxbuttonincustomerserviceselectanoption').style.display = 'none';
 }
 function activateRefundSelectOption(){
   localStorage.setItem('activaterefundselectoption','activaterefundselectoption')
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 const refundSelectOptionActivated =  localStorage.getItem('activaterefundselectoption')
 if (refundSelectOptionActivated === 'activaterefundselectoption'){
@@ -14573,7 +14634,7 @@ function exitLndCustomerServiceforSelectanOption(){
     }, 100);
     localStorage.removeItem('selectoptionafterbotresponseformale');
     localStorage.removeItem('selectoptionafterbotresponseforfemale')
-    location.href = 'dashboard.html';
+    dashboardPage();
   },200)
   }
 }
@@ -14638,7 +14699,7 @@ elems.forEach(function(elem){
     });
     localStorage.removeItem('selectoptionafterbotresponseformale');
     localStorage.removeItem('selectoptionafterbotresponseforfemale')
-    location.href = 'dashboard.html';
+    dashboardPage();
     }, 200);
     document.getElementById('navigationbuttonsdivdisplay').style.display = 'block';
     document.getElementById('protrait').style.display = 'block';
@@ -14647,7 +14708,7 @@ elems.forEach(function(elem){
 //male
 function onclickSelectanOptionAfterBotResponseForMale(){
   localStorage.setItem('selectoptionafterbotresponseformale','selectoptionafterbotresponseformale');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 const selectOptionAfterBotResponseforMale = localStorage.getItem('selectoptionafterbotresponseformale');
 if (selectOptionAfterBotResponseforMale === 'selectoptionafterbotresponseformale'){ 
@@ -14831,7 +14892,7 @@ const femaleElements = document.querySelectorAll('.displayselectanoptionaferbotr
 //female
 function onclickSelectanOptionAfterBotResponseForFemale(){
   localStorage.setItem('selectoptionafterbotresponseforfemale','selectoptionafterbotresponseforfemale');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 const selectOptionAfterBotResponseforFemale = localStorage.getItem('selectoptionafterbotresponseforfemale');
 if (selectOptionAfterBotResponseforFemale === 'selectoptionafterbotresponseforfemale'){
@@ -15071,7 +15132,7 @@ if (input === passWord) {
     localStorage.setItem('refundbuttonactivated','refundbuttonactivated');
     localStorage.setItem('refundbuttonactivateddisplay','refundbuttonactivateddisplay');
     localStorage.setItem('refundbuttonactivatednotification','refundbuttonactivatednotification');
-     location.href = 'dashboard.html';
+     dashboardPage();
     },5000)
 
     
@@ -15114,7 +15175,7 @@ if (activatedRefundButtonNotification === 'refundbuttonactivatednotification'){
 }
 function exitRefundButtonActivatedNotification(){
   localStorage.removeItem('refundbuttonactivatednotification');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 //display refund button
 const displayActivatedRefundButton = localStorage.getItem('refundbuttonactivateddisplay');
@@ -15126,7 +15187,7 @@ const disableRefundButtonBack = localStorage.getItem('disablerefundbuttonafterev
 if (disableRefundButtonBack === 'disablerefundbuttonaftereveryrefundinitation'){
   localStorage.removeItem('refundbuttonactivateddisplay');
   localStorage.removeItem('disablerefundbuttonaftereveryrefundinitation');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 //REDIRECT TO MAKE DEPOSIT DASHBOARD PORTAL
@@ -15179,6 +15240,13 @@ setTimeout(function(){
     div.style.height = '0px';
   }
 },1500)
+
+//view deposit portal buttons in dashboard
+document.getElementById('viewdepositportalfromportdashboard-button').style.background = 'blue';
+document.getElementById('viewdepositportalfromportdashboard-button').style.color = 'white';
+//lnd 
+document.getElementById('lnddepositdashboardbox-button').style.background = 'blue';
+document.getElementById('lnddepositdashboardbox-button').style.color = 'white';
 }
 function exitMakeDepositDashboardPortal(){
   const div = document.getElementById('depositandtaxchargesdashboarddiv');
@@ -15191,6 +15259,9 @@ function exitMakeDepositDashboardPortal(){
     document.body.style.overflow = '';
     document.getElementById('navigationbuttonsdivdisplay').style.display = 'block';
     document.getElementById('protrait').style.display = 'block';
+//view deposit portal buttons in dashboard
+document.getElementById('viewdepositportalfromportdashboard-button').style.background = '';
+document.getElementById('viewdepositportalfromportdashboard-button').style.color = '';
 }
 function exitLndMakeDepositDashboardPortal(){
   const div = document.getElementById('depositandtaxchargesdashboarddiv');
@@ -15203,6 +15274,9 @@ function exitLndMakeDepositDashboardPortal(){
    //page body scroll disabling
     document.body.style.overflow = '';
   }
+//lnd view deposit button
+document.getElementById('lnddepositdashboardbox-button').style.background = '';
+document.getElementById('lnddepositdashboardbox-button').style.color = '';
 }
 //from tax navigation
 function goToMakeDepositDashboardPortal(){
@@ -15761,7 +15835,7 @@ function exitNotifications() {
       document.getElementById('navigationbuttonsdivdisplay').style.display = 'block';
       //view and clear notification reader
       localStorage.removeItem('notificationreader');
-      location.href = 'dashboard.html';
+      dashboardPage();
       // Clear new notification signal
       for (let i = 1; i <= 30; i++) {
       localStorage.removeItem(`newnotificationsignal${i}`);
@@ -15800,7 +15874,7 @@ function exitNotificationsLnd() {
       document.getElementById('notifications').style.display = 'none';
       //view and clear notification reader
       localStorage.removeItem('notificationreader');
-      location.href = 'dashboard.html';
+      dashboardPage();
       // Clear new notification signal
       for (let i = 1; i <= 30; i++) {
       localStorage.removeItem(`newnotificationsignal${i}`);
@@ -16262,7 +16336,7 @@ if (blockChainPopUpNotification === 'popup'){
 }
 function exitBlockchainPopUp(){
   localStorage.removeItem('popupblockchainnotification');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 
@@ -16507,7 +16581,7 @@ if (changeOfNamePopUpNotification === 'popup'){
 }
 function exitChangeofNamePopUp(){
   localStorage.removeItem('popupchangeofnamenotification');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 //email and password change notification
@@ -16738,7 +16812,7 @@ if (changeUserFirstNameToNew === '' || changeUserLastNameToNew === ''){
 setTimeout(function(){
 localStorage.setItem('legateefirstname',changeUserFirstNameToNew);
 localStorage.setItem('legateelastname',changeUserLastNameToNew);
-location.href = 'dashboard.html';
+dashboardPage();
 },5000)
 }
 
@@ -16757,7 +16831,7 @@ const changeUserLastNameToNew = document.getElementById('editlnduserlastnameinpu
 setTimeout(function(){
 localStorage.setItem('birthrightfirstname',changeUserFirstNameToNew);
 localStorage.setItem('birthrightlastname',changeUserLastNameToNew);
-location.href = 'dashboard.html';
+dashboardPage();
 },5000)
 }
 }
@@ -16807,7 +16881,7 @@ if (changeUserFirstNameToNew === '' || changeUserLastNameToNew === ''){
 setTimeout(function(){
 localStorage.setItem('legateefirstname',changeUserFirstNameToNew);
 localStorage.setItem('legateelastname',changeUserLastNameToNew);
-location.href = 'dashboard.html';
+dashboardPage();
 },5000)
 }
 //Birthright
@@ -16826,7 +16900,7 @@ if (changeUserFirstNameToNew === ''){
     document.body.style.overflow = 'hidden';
 setTimeout(function(){
 localStorage.setItem('birthrightname',changeUserFirstNameToNew);
-location.href = 'dashboard.html';
+dashboardPage();
 },5000)
 }
 }
@@ -16979,6 +17053,12 @@ const formattedDepositsBalanceAmount = Number(depositsBalanceAmount).toLocaleStr
   maximumFractionDigits: 2
 });
 document.getElementById('displaydepositsamount').textContent = formattedDepositsBalanceAmount;
+const dashboardDepositBalance = localStorage.getItem('depositsdashboardbalance');
+document.getElementById('depositsdashboardbalance').textContent = dashboardDepositBalance;
+document.getElementById('depositsbalanceinlnddashboardbox').textContent = dashboardDepositBalance;
+if (!dashboardDepositBalance){
+  document.getElementById('depositsbalanceinlnddashboardbox').textContent = '0.00';
+}
 
 //FUNDED OR CREDITED BALANCE
 const fundedBalance = localStorage.getItem('fundedbalance');
@@ -17022,7 +17102,7 @@ const fundedBalanceTime = localStorage.getItem('fundedBalancecurrenttime');
 document.getElementById('notificationcontenttimep16').innerText = fundedBalanceTime;
 function exitFundedPopNoti(){
   localStorage.removeItem('fundedbalancenotification');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 // GRANT BALANCE
 const grantAmount = localStorage.getItem('Grantamount');
@@ -17043,7 +17123,8 @@ document.getElementById('grantbalancefromusdt').textContent = formattedGrantAmou
 document.getElementById('grantamountinwithdraw').textContent =  formattedGrantAmount;
 // decreasing grant amount by 0.20
 let grantAmountNumber = Math.floor(Number(grantAmount)); // remove decimals
-if (grantAmountNumber > 2) {
+if (depositsBalanceAmount === ''){
+  if (grantAmountNumber > 2) {
   let counter = grantAmountNumber; // set counter to initial value
   setInterval(() => {
     if (counter > 2) { // only reduce counter if it's greater than 2
@@ -17055,6 +17136,13 @@ if (grantAmountNumber > 2) {
     }
   }, 5000); // interval set to 5 seconds
 }
+}
+//deposit dashboard display
+if (depositsBalanceAmount != ''){
+ document.getElementById('depositsdashboardbox').style.display = 'block';
+ document.getElementById('lnddepositdashboarditembox').style.display = 'block';
+} 
+
 // grant savings amount 
 const grantSavingsAmount = localStorage.getItem('Grantsavingsamount');
 const formattedSavingsAmount = Number(grantSavingsAmount).toLocaleString();
@@ -17070,7 +17158,7 @@ document.getElementById('savingsbalanceinblockchainsview2').textContent = format
 
 // grant Bitcoin amount 
 const grantBitcoinAmount = localStorage.getItem('Grantbitcoinamount');
-const formattedGrantBitcoinAmount = Number(grantBitcoinAmount).toFixed(2);
+const formattedGrantBitcoinAmount = Number(grantBitcoinAmount)
 document.getElementById('bitcoinamountintransfer').innerText = formattedGrantBitcoinAmount;
 document.getElementById('bitcoinbalanceamounttograntbalance').innerText = formattedGrantBitcoinAmount;
 document.getElementById('portwalletbitcoin1').innerText = formattedGrantBitcoinAmount;
@@ -17097,7 +17185,11 @@ if (grantBitcoinAmountNumber !== 0) {
 // btc real value display
 const currentBitcoinRate = 1 / 0.00004941; 
 const grantBitcoinAmountInBTC = (Number(grantBitcoinAmount) / currentBitcoinRate).toFixed(8);
-document.getElementById('btccurrentvalueamount').innerText = grantBitcoinAmountInBTC;
+//document.getElementById('').innerText = grantBitcoinAmountInBTC;
+//current value
+const usdToBtcRate = 0.000010;
+const btcValue = formattedGrantBitcoinAmount * usdToBtcRate;
+document.getElementById('btccurrentvalueamount').innerText = btcValue.toFixed(6);
 
 
 // grant Etherium amount 
@@ -17220,12 +17312,16 @@ function onclickNumberInputsDisregardSpecialChar(){
   depositsReceiptBalanceInput.value = depositsReceiptBalanceInput.value.replace(/[^0-9\.]/g, '');
 }
 
-//Withdraw grant amount
-const withdrawGrant = localStorage.getItem('Grantwithdrawalamount');
-const formattedGrantWithdraw = Number(withdrawGrant).toLocaleString();
-document.getElementById('grantwithdrawals').textContent = formattedGrantWithdraw;
-document.getElementById('grantwithdrawalsinlandscape').textContent = formattedGrantWithdraw;
-
+//Withdrawals amount
+const totalcashapppaypalwithdrawals = JSON.parse(localStorage.getItem("cashappandpaypaltransactionsamount")) || [];
+const totalSum = totalcashapppaypalwithdrawals.reduce((sum, amount) => sum + amount, 0);
+// Get the Grantwithdrawalamount and convert to number
+const withdrawGrant = parseFloat(localStorage.getItem('Grantwithdrawalamount')) || 0;
+// Sum the totals
+const combinedTotal = totalSum + withdrawGrant;
+const formattedCombinedTotal = combinedTotal.toLocaleString();
+document.getElementById('grantwithdrawals').textContent = formattedCombinedTotal;
+document.getElementById('grantwithdrawalsinlandscape').textContent = formattedCombinedTotal;
 
  
 //Display cashier 
@@ -17242,7 +17338,7 @@ function displayCashier(){
   document.getElementById('cashier').style.display = 'block';
 }
 function cancelTransfer(){
-  window.location.href = 'dashboard.html';
+  window.dashboardPage();
 }
 
 
@@ -17336,7 +17432,7 @@ savingsAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantsavingsamount', savingsAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('granttransfertosavings', 'granttransfertosavingssuccess');
 const transferValueAmount = document.getElementById('savingsinputid').value;
 localStorage.setItem('granttosavingstransferedamount',transferValueAmount)
@@ -17433,7 +17529,7 @@ grantAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantamount', grantAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('savingstransfertogrant', 'savingstransfertograntsuccess');
 const transferValueAmount = document.getElementById('savingstograntbalanceinput').value;
 localStorage.setItem('savingstogranttransferedamount',transferValueAmount)
@@ -17479,7 +17575,7 @@ if (localStorage.getItem('granttransfertosavings') === 'granttransfertosavingssu
 function exitGranttoSavingsTransferNotification(){
   localStorage.removeItem('granttransfertosavings');
   localStorage.removeItem('granttosavingstransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 //savings to grant
 if (localStorage.getItem('savingstransfertogrant') === 'savingstransfertograntsuccess') {
@@ -17496,7 +17592,7 @@ if (localStorage.getItem('savingstransfertogrant') === 'savingstransfertograntsu
 function exitSavingstoGrantTransferNotification(){
   localStorage.removeItem('savingstransfertogrant');
   localStorage.removeItem('savingstogranttransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 //BITCOIN TRANSFER
@@ -17567,7 +17663,7 @@ bitcoinAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantbitcoinamount', bitcoinAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('granttransfertobitcoin', 'granttransfertobitcoinsuccess');
 const transferValueAmount = document.getElementById('bitcoininputid').value;
 localStorage.setItem('granttobitcointransferedamount',transferValueAmount)
@@ -17664,7 +17760,7 @@ grantAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantamount', grantAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('bitcointransfertogrant', 'bitcointransfertograntsuccess');
 const transferValueAmount = document.getElementById('bitcointograntbalanceinput').value;
 localStorage.setItem('bitcointogranttransferedamount',transferValueAmount)
@@ -17715,7 +17811,7 @@ if (localStorage.getItem('granttransfertobitcoin') === 'granttransfertobitcoinsu
 function exitGranttoBitcoinTransferNotification(){
   localStorage.removeItem('granttransfertobitcoin');
   localStorage.removeItem('granttobitcointransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 //bitcoin to grant
 if (localStorage.getItem('bitcointransfertogrant') === 'bitcointransfertograntsuccess') {
@@ -17739,7 +17835,7 @@ if (localStorage.getItem('bitcointransfertogrant') === 'bitcointransfertograntsu
 function exitBitcointoGrantTransferNotification(){
   localStorage.removeItem('bitcointransfertogrant');
   localStorage.removeItem('bitcointogranttransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 
@@ -17813,7 +17909,7 @@ etheriumAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantetheriumamount', etheriumAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('granttransfertoetherium', 'granttransfertoetheriumsuccess');
 const transferValueAmount = document.getElementById('etheriuminputid').value;
 localStorage.setItem('granttoetheriumtransferedamount',transferValueAmount)
@@ -17910,7 +18006,7 @@ grantAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantamount', grantAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('etheriumtransfertogrant', 'etheriumtransfertograntsuccess');
 const transferValueAmount = document.getElementById('etheriumtograntbalanceinput').value;
 localStorage.setItem('etheriumtogranttransferedamount',transferValueAmount)
@@ -17960,7 +18056,7 @@ if (localStorage.getItem('granttransfertoetherium') === 'granttransfertoetherium
 function exitGranttoEtheriumTransferNotification(){
   localStorage.removeItem('granttransfertoetherium');
   localStorage.removeItem('granttoetheriumtransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 //etherium to grant
 if (localStorage.getItem('etheriumtransfertogrant') === 'etheriumtransfertograntsuccess') {
@@ -17981,7 +18077,7 @@ if (localStorage.getItem('etheriumtransfertogrant') === 'etheriumtransfertogrant
 function exitEtheriumtoGrantTransferNotification(){
   localStorage.removeItem('etheriumtransfertogrant');
   localStorage.removeItem('etheriumtogranttransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 
@@ -18055,7 +18151,7 @@ usdtAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantusdtamount', usdtAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('granttransfertousdt', 'granttransfertousdtsuccess');
 const transferValueAmount = document.getElementById('usdtinputid').value;
 localStorage.setItem('granttousdttransferedamount',transferValueAmount)
@@ -18152,7 +18248,7 @@ grantAmount += subtractValue;
 // Set the new total value
 localStorage.setItem('Grantamount', grantAmount);
 // Redirect to dashboard.html
-location.href = 'dashboard.html';
+dashboardPage();
 localStorage.setItem('usdttransfertogrant', 'usdttransfertograntsuccess');
 const transferValueAmount = document.getElementById('usdttograntbalanceinput').value;
 localStorage.setItem('usdttogranttransferedamount',transferValueAmount)
@@ -18203,7 +18299,7 @@ if (localStorage.getItem('granttransfertousdt') === 'granttransfertousdtsuccess'
 function exitGranttoUSDTTransferNotification(){
   localStorage.removeItem('granttransfertousdt');
   localStorage.removeItem('granttousdttransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 //usdt to grant
 if (localStorage.getItem('usdttransfertogrant') === 'usdttransfertograntsuccess') {
@@ -18226,20 +18322,25 @@ if (localStorage.getItem('usdttransfertogrant') === 'usdttransfertograntsuccess'
 function exitUSDTtoGrantTransferNotification(){
   localStorage.removeItem('usdttransfertogrant');
   localStorage.removeItem('usdttogranttransferedamount');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 
 
 //WITHDRAW
-function navigateWithdraw(){
+const withdrawDirectlyToBank = localStorage.getItem("withdrawtobank")
+if (withdrawDirectlyToBank){
   document.getElementById('landmenucontent').style.display = 'none';
   document.getElementById('protrait').style.display = 'none';
   document.getElementById('cashier').style.display = 'none';
   document.getElementById('withdraw').style.display = 'block';
   document.getElementById('withdrawtobankdetailsdiv').style.display = 'block';
+  localStorage.removeItem("menunavigationstoretrack")
 //call these functin on element overlay
  document.getElementById('navigationbuttonsdivdisplay').style.display = 'none';
+}
+function navigateWithdraw(){
+  location.href = 'withdraw.html'
 }
 function confirmWithdrawDetails() {
   var bankName = document.getElementById("recipientbanknameinput").value;
@@ -18278,6 +18379,10 @@ function withdrawFromGrantbalance(){
   const withdrawInputValue = parseInt(withdrawInput);
   if (withdrawInput === '' || withdrawInputValue <= 108){
     document.getElementById('withdrawinputid').style.border = '2px solid green';
+    document.getElementById('maximumandminimumamounttowithdraw-p').innerText = '$109usd minimum';
+  } else if (withdrawInputValue >= 101000){
+    document.getElementById('withdrawinputid').style.border = '2px solid green';
+    document.getElementById('maximumandminimumamounttowithdraw-p').innerText = '$100kusd maximum';
   } else{
        // Get the current value of "Grantamount" from localStorage
        let currentGrantAmount = localStorage.getItem('Grantamount');
@@ -18456,7 +18561,7 @@ setTimeout(function() {
   deductWithdrawedamountfromGrantBalance();
     document.getElementById('withdrawalreceipt').style.color ='white';
     document.getElementById('withdrawalreceipt').style.background ='black';
-    location.href = 'dashboard.html';
+    dashboardPage();
 }, 17000); 
 //generate random number and id's
    let length = 12; 
@@ -18532,13 +18637,37 @@ function downloadReceipt(){
   document.getElementById('doneonwithdrawalbtn').style.display = 'block';
 }
 function withdrawalTransactionCustomerService(){
-  location.href = 'dashboard.html';
+  dashboardPage();
   localStorage.removeItem('Newwithdrawal');
 }
 function exitTransactionComplete(){
-  location.href = 'dashboard.html';
+  dashboardPage();
   localStorage.removeItem('Newwithdrawal');
   localStorage.removeItem('WNdisplay');
+}
+function HistoryPage(){
+  location.href = 'history.html';
+}
+const banktransactionhistorystore = localStorage.getItem("banktransactionshistory")
+if (banktransactionhistorystore){
+  document.getElementById('navigationbuttonsdivdisplay').style.display = 'none';
+  document.getElementById('landmenucontent').style.display = 'none';
+  document.getElementById('protrait').style.display = 'none';
+  document.getElementById('withdraw').style.display = 'block';
+  document.getElementById('withdrawalshistory').style.display = 'block';
+  document.getElementById('debitbutton').style.background = 'green';
+  document.getElementById('debitbutton').style.color = 'white';
+  document.getElementById('withdrawtobankdetailsdiv').style.display = 'none';
+  document.getElementById('withdraw-p').style.display = 'none';
+  document.getElementById('withdrawtobankdetailsdiv').style.display = 'none';
+  document.getElementById('withdrawamountdiv').style.display = 'none';
+  document.getElementById('reviewwithdrawdetails').style.display = 'none';
+  document.getElementById('processingwithdrawal').style.display = 'none';
+  document.getElementById('withdrawalreceipt').style.display = 'none';
+  document.getElementById('transactionsuccess').style.display = 'none';
+}
+function navigatebacktohistory(){
+  location.href = 'history.html'
 }
 function navWithdrawalsHistory(){
   document.getElementById('navigationbuttonsdivdisplay').style.display = 'none';
@@ -18589,7 +18718,7 @@ for (let i = 1; i <= 16; i++) {
    }
   document.getElementById('processingrefundactivation').style.display = 'block';
 setTimeout(function() {
- location.href = 'dashboard.html';
+ dashboardPage();
 }, 40000); 
 localStorage.setItem('Newcredit','Newcredit');
 
@@ -18644,7 +18773,7 @@ const refundCompletedUpdate = localStorage.getItem('refundcompleted');
 if (refundCompletedUpdate === 'refundcompleted'){
   localStorage.removeItem('withdrawrefundamount');
   localStorage.removeItem('refundcompleted');
-  location.href = 'dashboard.html';
+  dashboardPage();
 
   
 //NOTIFICATION SECTION
@@ -18713,16 +18842,21 @@ if (subtractValue > currentDepositsAmount) {
      document.getElementById('insufficientfundsbox').style.transition = '0.5s ease';
     }, 10); // add a 10ms delay depositnotification
     return;
-   }  else {
-      document.getElementById('insufficientdepositbalancenotification').innerText = "Sorry, you can't transfer pending deposit balances!";
-      document.getElementById('insufficientdepositbalancenotification').style.color = 'green';
-      document.getElementById('insufficientdepositbalancenotification').style.width = '170px';
-   }
+   } 
+//Enabling and Disabling deposits transfer
+{
+   //else {
+      //document.getElementById('insufficientdepositbalancenotification').innerText = "Sorry, you can't transfer pending deposit balances!";
+      //document.getElementById('insufficientdepositbalancenotification').style.color = 'green';
+      //document.getElementById('insufficientdepositbalancenotification').style.width = '170px';
+   //}
+}
+
 // Subtract the value
 let newDepositsAmount = currentDepositsAmount - subtractValue;
 // Update the global variable
 // Store the new total back in localStorage
-//localStorage.setItem('depositsbalanceamount', newDepositsAmount);
+localStorage.setItem('depositsbalanceamount', newDepositsAmount);
 // Get the current value of "Grantamount" from localStorage
 let grantAmount = localStorage.getItem('Grantamount');
 // Check if grantAmount exists, if not set it to 0
@@ -18735,11 +18869,14 @@ if (grantAmount === null) {
 // Add the subtracted value to the grantAmount
 grantAmount += subtractValue;
 // Set the new total value
-//localStorage.setItem('Grantamount', grantAmount);
-// Redirect to dashboard.html
-//localStorage.setItem('depositstransfertogrant', 'depositstransfertograntsuccess');
+localStorage.setItem('Grantamount', grantAmount);
+//Redirect to dashboard.html
+localStorage.setItem('depositstransfertogrant', 'depositstransfertograntsuccess');
 const transferValueAmount = document.getElementById('savingstograntbalanceinput').value;
-//localStorage.setItem('depositstograntbalanceinput',transferValueAmount)
+localStorage.setItem('depositstograntbalanceinput',transferValueAmount);
+//deposit transfer amount
+localStorage.setItem('depositstransferdetailupdate','depositstransferdetailupdate');
+localStorage.setItem('depositstransferamountdetailupdate',subtractValue);
 
 
 //date
@@ -18751,7 +18888,8 @@ const hours = currentTime.getHours();
 const minutes = currentTime.getMinutes();
 const seconds = currentTime.getSeconds();
 const timeFormat = `${day.toString().padStart(2, '0')} ${month.toString().padStart(2, '0')} ${year.toString().substr(2, 2)} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}${hours >= 12 ? 'pm' : 'am'}`;
-//localStorage.setItem('depositstograntbalancecurrenttime', timeFormat);
+localStorage.setItem('depositstograntbalancecurrenttime', timeFormat);
+dashboardPage();
   }
 }
 //transfering deposit 
@@ -18788,11 +18926,17 @@ if (subtractValue > currentDepositsAmount) {
      document.getElementById('insufficientfundsbox').style.transition = '0.5s ease';
     }, 10); // add a 10ms delay depositnotification
     return;
-   }  else {
-      document.getElementById('insufficientdepositbalancenotification').innerText = "Sorry, you can't transfer pending deposit balances!";
-      document.getElementById('insufficientdepositbalancenotification').style.color = 'green';
-      document.getElementById('insufficientdepositbalancenotification').style.width = '170px';
-   }
+   }  
+//Enabling and Disabling deposits transfer
+{
+  //else {
+    //pending deposit disabling transfer
+//document.getElementById('insufficientdepositbalancenotification').innerText = "Sorry, you can't transfer pending deposit balances!";
+      //document.getElementById('insufficientdepositbalancenotification').style.color = 'green';
+      //document.getElementById('insufficientdepositbalancenotification').style.width = '170px';
+  // }
+}
+
 // Subtract the value
 let newDepositsAmount = currentDepositsAmount - subtractValue;
 // Update the global variable
@@ -18880,6 +19024,7 @@ let depositValue = Number(depositAmount);
 let newDepositsAmount = currentDepositsAmount + depositValue;
 
 localStorage.setItem('depositsbalanceamount', newDepositsAmount);
+localStorage.setItem('depositsdashboardbalance', newDepositsAmount);
 
 
 /////////////////////////////////////////////////////   
@@ -18928,7 +19073,7 @@ localStorage.setItem('depositsbalanceamount', newDepositsAmount);
     localStorage.setItem('depositsdate1', depositDate);
     localStorage.setItem('depositsvia1', depositFrom);
     }
-    location.href = 'dashboard.html';
+    dashboardPage();
   
 },5000)
   }
@@ -19024,6 +19169,14 @@ function okayExitDepositConfirmNoti(){
   localStorage.removeItem('depositreceiptupdatenotification');
   location.href ='dashboard.html';
 }
+{
+const depositTransferUpdate = localStorage.getItem('depositstransferdetailupdate');
+const depositTransferAmountUpdate = localStorage.getItem('depositstransferamountdetailupdate');
+if (depositTransferUpdate){
+  document.getElementById('deposittransferstatusupdate-p').style.display = 'block';
+  document.getElementById('deposittransferamountstatusupdate').innerText = depositTransferAmountUpdate;
+}
+}
 
 //TAX CHARGES PAYMENT
 function submitandUpdateTaxCharges(){
@@ -19060,7 +19213,7 @@ let newTaxAmount = currentTaxChargesAmount + taxValue;
 
 localStorage.setItem('taxchargescleared', newTaxAmount);
 localStorage.setItem('taxchargesclearednotification','taxchargesclearednotification');
-location.href = 'dashboard.html';
+dashboardPage();
 },5000)
  }
 }
@@ -19087,11 +19240,32 @@ if (taxChargesClearedNotification){
 }
 function okayExitTaxConfirmNoti(){
   localStorage.removeItem('taxchargesclearednotification');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 //Navigation
 //Portrait menu
+function dashboardHomePage(){
+  location.href = 'dashboard.html'
+  localStorage.removeItem("banktransactionshistory")
+  localStorage.removeItem("menunavigationstoretrack")
+  localStorage.removeItem("withdrawtobank")
+}
+const menuNavFromExternal = localStorage.getItem("menunavigationstoretrack");
+if (menuNavFromExternal){
+  document.getElementById('details-and-approval').style.display = 'none';
+ document.getElementById('allrecentwinnersdiv').style.display = 'none';
+ document.getElementById('insufficientfunds').style.display = 'none';
+ document.getElementById('cashier').style.display = 'none';
+ document.getElementById('walletdiv').style.display = 'none';
+ document.getElementById('withdraw').style.display = 'none';
+ document.getElementById('protrait').style.display = 'none';
+ document.getElementById('portwalletnavigationandstats').style.display = 'none';
+ document.getElementById('portmenuportrait').style.display = 'block';
+ document.getElementById('newcredit').style.display = 'none';
+ document.getElementById('userwalletscoinsstatus').style.display = 'none';
+ localStorage.removeItem("withdrawtobank")
+}
 function portraitMenu(){
  document.getElementById('details-and-approval').style.display = 'none';
  document.getElementById('allrecentwinnersdiv').style.display = 'none';
@@ -19247,7 +19421,7 @@ function okayExitChainsAccountStatusAfterSuccess(){
   localStorage.removeItem('useretheriumwalletadded');
   localStorage.removeItem('userbitcoinwalletadded');
   localStorage.removeItem('userusdtwalletadded');
-  location.href = 'dashboard.html';
+  dashboardPage();
 }
 
 //view blockchains
@@ -19480,7 +19654,7 @@ document.getElementById('processingloadingtextloading').style.display = 'block';
   //
   localStorage.setItem('userbitcoinwalletaddress',userBitcoinAddressInput);
   localStorage.setItem('userbitcoinwalletadded','btcready');
-  location.href = 'dashboard.html';
+  dashboardPage();
 },2000)
   
 //NOTIFICATION SECTION
@@ -19525,7 +19699,7 @@ document.getElementById('processingloadingtextloading').style.display = 'block';
   //
   localStorage.setItem('useretheriumwalletaddress',userEtheriumAddressInput);
   localStorage.setItem('useretheriumwalletadded','ethready');
-  location.href = 'dashboard.html';
+  dashboardPage();
   },2000)
 
 //NOTIFICATION SECTION
@@ -19570,7 +19744,7 @@ document.getElementById('processingloadingtextloading').style.display = 'block';
   //
   localStorage.setItem('userusdtwalletaddress',userUsdtAddressInput);
   localStorage.setItem('userusdtwalletadded','usdtready');
-  location.href = 'dashboard.html';
+  dashboardPage();
   },2000)
 
 //NOTIFICATION SECTION
@@ -19723,7 +19897,7 @@ function toggleDarkModeOn(){
  document.getElementById('lndtoggledarkmodeoffdiv').style.display = 'block';
 //toggle dark mode--
 localStorage.setItem('darkmode','darkmode');
-location.href = 'dashboard.html';
+dashboardPage();
 }
 function toggleDarkModeOff(){
  document.getElementById('toggledarkmodeondiv').style.display = 'block';
@@ -19732,7 +19906,7 @@ function toggleDarkModeOff(){
  document.getElementById('lndtoggledarkmodeoffdiv').style.display = 'none';
 //toggle dark mode off--
 localStorage.removeItem('darkmode');
-location.href = 'dashboard.html';
+dashboardPage();
 }
 
 const pageDarkMode = localStorage.getItem('darkmode');
